@@ -13,16 +13,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className=" rounded-lg overflow-hidden shadow-lg bg-white">
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+    <div className=" rounded-lg overflow-hidden shadow-lg bg-white transform transition-transform duration-300 hover:scale-105">
+      <img src={imageUrl} alt={title} className="w-full h-64 object-cover " />
       <div className="p-4">
         <h3 className="text-xl font-semibold">{title}</h3>
         <p className="text-gray-700 mt-2">{description}</p>
         <a
           href={link}
+          target="_blank"
           className="inline-block mt-4 text-cyan-600 hover:text-cyan-800 transition-colors"
         >
-          Learn more
+          view git repository
         </a>
       </div>
     </div>

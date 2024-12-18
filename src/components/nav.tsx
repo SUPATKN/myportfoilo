@@ -1,6 +1,6 @@
 export const Nav = () => {
   return (
-    <nav className="min-h-20 animate-dropdown flex flex-row justify-between items-center px-12">
+    <nav className="sticky top-0 min-h-20 flex flex-row justify-between items-center px-12 bg-gradient-to-b from-cyan-900/70 to-transparent z-50 animate-dropdown">
       {/* ฝั่งซ้าย */}
       <h1 className="text-4xl text-cyan-100 font-bold">Portfolio</h1>
 
