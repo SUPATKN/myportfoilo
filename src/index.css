@@ -8,3 +8,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* เริ่มต้นที่ตำแหน่งขวาสุด */
+    opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+  }
+  100% {
+    transform: translateX(0); /* เลื่อนเข้ามา */
+    opacity: 1; /* ปรับความโปร่งใสให้เต็มที่ */
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-out forwards; /* ใช้แอนิเมชันนี้ */
+}
