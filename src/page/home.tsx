@@ -55,25 +55,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-emerald-50 h-full flex flex-col items-center">
+    <div className="bg-emerald-50 h-full w-full flex flex-col items-center">
       {/* Header Section */}
       <div className="flex flex-col items-center w-full animate-dropdown">
         <img
-          className="rounded-full w-48 h-48 my-5 object-cover object-center "
+          className="rounded-full w-48 h-48 my-5 object-cover object-center sm:w-32 sm:h-32 md:w-48 md:h-48"
           src={img}
           alt="Profile"
         />
-        <span className="text-emerald-950 text-4xl font-bold">
+        <span className="text-emerald-950 text-4xl font-bold text-center sm:text-xl md:text-4xl">
           Supatkon Pundontong
         </span>
 
         {/* About Me Section */}
-        <div
-          id="about"
-          className="max-w-2xl w-full p-6 rounded-md mt-10 text-center scroll-mt-24"
-        >
-          <h2 className="text-2xl font-bold text-emerald-950 mb-4">About Me</h2>
-          <p className="text-emerald-950 font-medium ">
+        <div className="max-w-2xl w-full p-6 rounded-md mt-5 text-center sm:p-4">
+          <h2 className="text-2xl font-bold text-emerald-950 mb-4 sm:text-xl">
+            About Me
+          </h2>
+          <p className="text-emerald-950 font-medium sm:text-sm">
             Hi, I'm Supatkon Pundontong, a third-year Computer Engineering
             student at Chiang Mai University. I'm passionate about software
             development, particularly in full-stack web development. I have
@@ -83,12 +82,15 @@ const Home = () => {
             Let's connect and collaborate!
           </p>
         </div>
+        <img
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWVhbmRva3YzNjlndGdvZmN1czkzNTQyeTNnYTZjb3ltZ2VocmVocSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1CsHxj6Q2iEeH4HhT7/giphy.webp"
+          className="size-32 mt-4"
+        />
       </div>
-
       {/* Tech stack */}
       <div
         id="tech"
-        className="mt-20 flex flex-col justify-center items-center scroll-mt-20"
+        className="mt-16 flex flex-col justify-center items-center scroll-mt-5"
       >
         <h1 className="text-2xl text-emerald-950 font-bold">Tech skills</h1>
         <div
@@ -177,7 +179,7 @@ const Home = () => {
       {/* Projects section */}
       <h2
         id="projects"
-        className="text-2xl text-emerald-950 font-bold mt-10 scroll-mt-24"
+        className="text-2xl text-emerald-950 font-bold mt-10 scroll-mt-2"
       >
         My Projects
       </h2>
@@ -194,7 +196,7 @@ const Home = () => {
       </div>
 
       {/* footer */}
-      <footer className="flex flex-col justify-center items-center bg-cyan-900 border-t-4 border-transparent shadow-xl w-full  gap-1 ">
+      <footer className="flex flex-col justify-center items-center bg-emerald-800 border-t-4 border-transparent shadow-xl w-full  gap-1 ">
         <div className="flex flex-row gap-3 mt-3 justify-center items-center">
           <h1 id="contact" className="text-xl font-semibold text-white ">
             Contacts :
