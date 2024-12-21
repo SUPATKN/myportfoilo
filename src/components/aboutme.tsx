@@ -1,5 +1,5 @@
 export const Aboutme = () => {
-  const img = "dist/profilePic1.jpg";
+  const img = "/src/asset/profilePic1.jpg";
   return (
     <div className="flex flex-col items-center w-full ">
       <img
