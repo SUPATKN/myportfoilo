@@ -29,17 +29,35 @@ export const Nav = () => {
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: easeInOut }}
-      className="sticky top-0 min-h-20 flex flex-row justify-between items-center px-12 bg-gradient-to-b from-emerald-200/90 to-transparent z-50 animate-dropdown"
+      className="sticky top-0 min-h-20 flex flex-row justify-between items-center px-12 bg-gradient-to-b from-emerald-50/70 to-transparent z-50 animate-dropdown"
     >
       {/* Left Side */}
-      <h1
-        className="text-xl sm:text-4xl text-emerald-900/80 font-bold"
-      >
-        Portfolio
+      <h1 className="text-2xl sm:text-4xl text-emerald-600 font-bold">
+        <span className="glowing-text">
+          {"Portfolio".split("").map((letter, index) => (
+            <span key={index} style={{ "--i": index }} className="inline-block">
+              {letter}
+            </span>
+          ))}
+        </span>
       </h1>
 
       {/* Right Side (Desktop View) */}
       <div className="hidden md:flex flex-row gap-x-8">
+        <a
+          href="/public/resume.pdf"
+          download="Supatkon_Resume.pdf"
+          className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
+        >
+          Resume/CV
+        </a>
+        <a
+          href="/public/Transcript.pdf"
+          download="Supatkon_Transcipt.pdf"
+          className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
+        >
+          Transcript
+        </a>
         <a
           href="#about"
           className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
@@ -59,6 +77,13 @@ export const Nav = () => {
           Projects
         </a>
         <a
+          href="#TA"
+          className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
+        >
+          Teaching Assistant
+        </a>
+
+        <a
           href="#contact"
           className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
         >
@@ -76,7 +101,15 @@ export const Nav = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-0 right-0 bg-white w-full h-screen flex flex-col items-center py-8 md:hidden">
+        <div className="absolute top-16 right-0 bg-emerald-400 w-full max-h-80 flex flex-col items-center py-4 rounded-lg shadow-lg overflow-y-auto z-40">
+          <a
+            href="/public/resume.pdf"
+            download="Supatkon_Resume.pdf"
+            className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
+            onClick={toggleMenu}
+          >
+            Resume/CV
+          </a>
           <a
             href="#about"
             className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
@@ -97,6 +130,13 @@ export const Nav = () => {
             onClick={toggleMenu}
           >
             Projects
+          </a>
+          <a
+            onClick={toggleMenu}
+            href="#TA"
+            className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
+          >
+            Teaching Assistant
           </a>
           <a
             href="#contact"

@@ -23,3 +23,20 @@ html {
 .slide-in {
   animation: slideIn 1s ease-out forwards; /* ใช้แอนิเมชันนี้ */
 }
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 5px rgb(26, 255, 0), 0 0 15px rgba(0, 255, 60, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.glowing-text span {
+  animation: glow 2s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}

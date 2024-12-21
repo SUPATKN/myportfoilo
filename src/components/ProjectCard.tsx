@@ -13,17 +13,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className=" rounded-lg overflow-hidden shadow-lg bg-white transform transition-transform duration-300 hover:scale-105">
+    <div className=" rounded-lg overflow-hidden shadow-2xl  bg-emerald-50 transform transition-transform duration-300 hover:scale-105">
       <img src={imageUrl} alt={title} className="w-full h-64 object-cover " />
-      <div className="p-4">
+      <div className="p-4 h-full">
         <h3 className="text-xl font-semibold">{title}</h3>
         <p className="text-gray-700 mt-2">{description}</p>
         <a
           href={link}
           target="_blank"
-          className="inline-block mt-4 text-cyan-600 hover:text-cyan-800 transition-colors"
+          className="inline-block mt-4 text-cyan-600 hover:text-cyan-800 transition-colors font-medium "
         >
-          view git repository
+          {title === "Nucleus" && (
+            <span className="text-red-600 font-medium">
+              The project is in progress
+            </span>
+          )}
+          {link && <span>view git repository</span>}
         </a>
       </div>
     </div>
