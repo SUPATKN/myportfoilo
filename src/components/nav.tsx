@@ -13,10 +13,12 @@ export const Nav = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
+    if (previous !== undefined) {
+      if (latest > previous && latest > 150) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
     }
   });
 
@@ -35,7 +37,11 @@ export const Nav = () => {
       <h1 className="text-2xl sm:text-4xl text-emerald-600 font-bold">
         <span className="glowing-text">
           {"Portfolio".split("").map((letter, index) => (
-            <span key={index} style={{ "--i": index }} className="inline-block">
+            <span
+              key={index}
+              style={{ "--i": index } as React.CSSProperties} // Cast to React.CSSProperties
+              className="inline-block"
+            >
               {letter}
             </span>
           ))}

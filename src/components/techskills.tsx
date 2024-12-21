@@ -3,16 +3,18 @@ import { useEffect, useState } from "react";
 export const Techskil = () => {
   const [isInView, setIsInView] = useState(false);
 
-  const handleIntersection = (entries: [any]) => {
+  const handleIntersection: IntersectionObserverCallback = (
+    entries: IntersectionObserverEntry[]
+  ) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      setIsInView(true); // แสดงแอนิเมชันเมื่อเข้ามาในมุมมอง
+      setIsInView(true); // Trigger animation when element is in view
     }
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5, // 50% ขององค์ประกอบต้องปรากฏในมุมมอง
+      threshold: 0.5, // 50% of the element must be visible
     });
     const techSection = document.getElementById("tech");
     if (techSection) {

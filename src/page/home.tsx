@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import TACard from "../components/TACard";
 import { Aboutme } from "../components/aboutme";
