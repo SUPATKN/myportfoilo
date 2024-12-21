@@ -51,14 +51,14 @@ export const Nav = () => {
       {/* Right Side (Desktop View) */}
       <div className="hidden md:flex flex-row gap-x-8">
         <a
-          href="/public/resume.pdf"
+          href="/resume.pdf"
           download="Supatkon_Resume.pdf"
           className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
         >
           Resume/CV
         </a>
         <a
-          href="/public/Transcript.pdf"
+          href="/Transcript.pdf"
           download="Supatkon_Transcipt.pdf"
           className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125"
         >
@@ -109,13 +109,20 @@ export const Nav = () => {
       {isMenuOpen && (
         <div className="absolute top-16 right-0 bg-emerald-400 w-full max-h-80 flex flex-col items-center py-4 rounded-lg shadow-lg overflow-y-auto z-40">
           <a
-            href="/public/resume.pdf"
+            href="/resume.pdf"
             download="Supatkon_Resume.pdf"
             className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
             onClick={toggleMenu}
           >
             Resume/CV
           </a>
+          <a
+          href="/Transcript.pdf"
+          download="Supatkon_Transcipt.pdf"
+          className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
+        >
+          Transcript
+        </a>
           <a
             href="#about"
             className="text-xl text-emerald-900/80 font-bold hover:text-emerald-900 transform transition-transform duration-300 hover:scale-125 mb-4"
